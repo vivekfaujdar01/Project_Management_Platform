@@ -1,0 +1,23 @@
+{
+  "name": "projectmanagementplatform",
+  "version": "1.0.0",
+  "description": "A project management platform for beginners",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "backend",
+    "API",
+    "Creation"
+  ],
+  "author": "Vivek Faujdar",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.10",
+    "prettier": "3.6.2"
+  }
+}
