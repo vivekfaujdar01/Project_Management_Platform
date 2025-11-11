@@ -52,7 +52,7 @@ const userSchema = new Schema(
             type: Date
         },
         emailVerificationToken: {
-            type: toString
+            type: String
         },
         emailVerificationExpiry: {
             type: Date
@@ -69,5 +69,11 @@ userSchema.pre("save", async function(next){
     this.password = await bcrypt.hash(this.password, 10)
     next()
 })
+
+// using bcrypt checking password is correct
+userSchema.methods.isPasswordCorrect = async function(password){
+    return await bcrypt.compare(password, this.password)
+}
+
 
 export const User = mongoose.model("User", userSchema);
