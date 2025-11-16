@@ -1,5 +1,5 @@
 import { ApiResponse } from "../utils/api-reponse.js";
-import { asyncHandler } from "../utils/async-handler.js";
+import {asyncHandler} from "../utils/async-handler.js";
 
 // Health Check Controller using asyncHandler
 const healthCheck = asyncHandler(async (req, res) => {

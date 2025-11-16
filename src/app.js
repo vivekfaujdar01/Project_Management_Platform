@@ -19,7 +19,10 @@ app.use(cors({
 
 // import the routes
 import healthcheckRoutes from "./routes/healthcheck.routes.js";
+import authRoutes from "./routes/auth.routes.js";
 
+// use the auth routes
+app.use("/api/v1/auth", authRoutes);
 // use the routes
 app.use("/api/v1/healthcheck", healthcheckRoutes);
 
